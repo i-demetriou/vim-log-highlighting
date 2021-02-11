@@ -93,19 +93,20 @@ syn match logXmlEntity       /&#\?\w\+;/
 "---------------------------------------------------------------------------
 syn keyword logLevelEmergency EMERGENCY EMERG
 syn keyword logLevelAlert ALERT
-syn keyword logLevelCritical CRITICAL CRIT FATAL
+syn keyword logLevelCritical CRITICAL CRIT FATAL CRITI
 syn keyword logLevelError ERROR ERR FAILURE SEVERE
-syn keyword logLevelWarning WARNING WARN
-syn keyword logLevelNotice NOTICE
-syn keyword logLevelInfo INFO
+syn keyword logLevelWarning WARNING WARN WARNG
+syn keyword logLevelNotice NOTICE NOTIC
+syn keyword logLevelInfo INFO INFOR
 syn keyword logLevelDebug DEBUG FINE
-syn keyword logLevelTrace TRACE FINER FINEST
+syn keyword logLevelTrace TRACE FINER FINEST XDEBU
 
 
 " Results
 "---------------------------------------------------------------------------
 syn keyword logSuccess SUCCESS OK GOOD
-syn keyword logFailed FAILED UNSUCCESSFUL
+syn keyword logFailed FAIL FAILED UNSUCCESSFUL
+syn keyword logIgnored PASS SKIP
 syn keyword logDebugging AEL AEL3
 
 " Highlight links
@@ -162,7 +163,6 @@ hi logSuccess ctermfg=DarkGreen
 hi def link logFailed ErrorMsg
 hi logIgnored ctermfg=DarkBlue
 hi logDebugging ctermfg=Yellow ctermbg=DarkBlue
-
 
 
 let b:current_syntax = 'log'
