@@ -102,6 +102,12 @@ syn keyword logLevelDebug DEBUG FINE
 syn keyword logLevelTrace TRACE FINER FINEST
 
 
+" Results
+"---------------------------------------------------------------------------
+syn keyword logSuccess SUCCESS OK GOOD
+syn keyword logFailed FAILED UNSUCCESSFUL
+syn keyword logDebugging AEL AEL3
+
 " Highlight links
 "---------------------------------------------------------------------------
 hi def link logNumber Number
@@ -152,10 +158,13 @@ hi def link logLevelInfo Repeat
 hi def link logLevelDebug Debug
 hi def link logLevelTrace Comment
 
+hi logSuccess ctermfg=DarkGreen
+hi def link logFailed ErrorMsg
+hi logDebugging ctermfg=Yellow ctermbg=DarkBlue
+
 
 
 let b:current_syntax = 'log'
 
 let &cpoptions = s:cpo_save
 unlet s:cpo_save
-
