@@ -160,6 +160,7 @@ hi def link logLevelTrace Comment
 
 hi logSuccess ctermfg=DarkGreen
 hi def link logFailed ErrorMsg
+hi logIgnored ctermfg=DarkBlue
 hi logDebugging ctermfg=Yellow ctermbg=DarkBlue
 
 
